@@ -1,7 +1,9 @@
-import 'package:complex_todos/screens/splash_screen.dart';
+import 'package:complex_todos/screens/dashboard/groups.dart';
 import 'package:flutter/material.dart';
 
-void main() async {
+import 'screens/login-sign-up/splash_screen.dart';
+
+void main() {
   runApp(const MyApp());
 }
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         backgroundColor: Colors.white,
       ),
-      home: const SplashScreen(),
+      home: const Groups(),
     );
   }
 }
