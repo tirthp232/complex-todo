@@ -91,6 +91,32 @@ class RegistrationScreen extends StatelessWidget {
                       width: 21.w,
                       height: 21.h,
                       marginTop: 433),
+                  Container(
+                    margin: EdgeInsets.only(left: 134.w, top: 114.h),
+                    width: 107.w,
+                    height: 107.h,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 11.r,
+                      child: Icon(
+                        Icons.person_2_outlined,
+                        color: Colors.black,
+                        size: 30.w,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 204.w, top: 186.h),
+                    width: 39.w,
+                    height: 39.h,
+                    child: CircleAvatar(
+                      radius: 11.r,
+                      child: Icon(
+                        Icons.camera_alt_outlined,
+                        size: 16.29.w,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(

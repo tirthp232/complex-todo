@@ -1,7 +1,6 @@
-import 'package:complex_todos/screens/dashboard/groups.dart';
+import 'package:complex_todos/screens/login-sign-up/setting_screen.dart';
+import 'package:complex_todos/screens/todo-list/todo_list_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'screens/login-sign-up/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'Responsive',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        backgroundColor: Colors.white,
       ),
-      home: const Groups(),
+      debugShowCheckedModeBanner: false,
+      home: const TodoListScreen(),
     );
   }
 }
