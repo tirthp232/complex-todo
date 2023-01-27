@@ -1,4 +1,3 @@
-import 'package:complex_todos/screens/login-sign-up/setting_screen.dart';
 import 'package:complex_todos/screens/todo-list/todo_list_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const TodoListScreen(),
+      home: TodoListScreen(),
     );
   }
 }
