@@ -9,15 +9,13 @@ class TodoListDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Drawer(
-      child: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(
-            right: 24.w,
-            left: 24.w,
-            top: 40.55.h,
-          ),
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: 24.w,
+          top: 40.55.h,
+        ),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,12 +42,10 @@ class TodoListDrawer extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Container(
-                            child: Image.asset(
-                              "assets/3.png",
-                              width: 56.w,
-                              height: 56.h,
-                            ),
+                          Image.asset(
+                            "assets/3.png",
+                            width: 56.w,
+                            height: 56.h,
                           ),
                           SizedBox(
                             width: 11.11.w,
@@ -170,7 +166,7 @@ class TodoListDrawer extends StatelessWidget {
                     ),
                     text(context, "To-Do List"),
                     SizedBox(
-                      height: 33.3.h,
+                      height: 32.1.h,
                     ),
                     text(context, "Journal"),
                     SizedBox(

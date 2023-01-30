@@ -11,13 +11,12 @@ class TodoListTaskAdd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Scaffold(
       backgroundColor: Color(0xFFFAFCFE),
       drawer: TodoListDrawer(title: title),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(top: 55.15.h),
+          padding: EdgeInsets.only(top: 55.04.h),
           child: Column(
             children: [
               TodoListHeader(title: title),

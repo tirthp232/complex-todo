@@ -1,15 +1,15 @@
-import 'package:complex_todos/model/model.dart';
-import 'package:complex_todos/screens/todo-list/addtask.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../addtask_screen.dart';
 
 class TodoListTaskAddBody extends StatelessWidget {
   const TodoListTaskAddBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Container(
+      color: Color(0xFFFAFCFE),
       margin: EdgeInsets.only(left: 18.72.w, right: 18.72.w, top: 24.28.h),
       child: Column(
         children: [
@@ -18,10 +18,11 @@ class TodoListTaskAddBody extends StatelessWidget {
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AddTask(),
-                    ));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AddTaskScreen(),
+                  ),
+                );
               },
               child: Container(
                 width: 90.w,
@@ -52,37 +53,52 @@ class TodoListTaskAddBody extends StatelessWidget {
             ),
             child: Column(
               children: [
-                ListTile(
-                  dense: true,
-                  visualDensity: VisualDensity(horizontal: -2, vertical: -2),
-                  leading: Model.list.first.icon,
-                  title: Text(
-                    Model.list.first.title!,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.sp,
-                      color: Colors.black,
-                    ),
-                  ),
-                  trailing: Text(
-                    Model.list.first.num.toString(),
+                Container(
+                  margin: EdgeInsets.only(
+                      left: 19.53.w, top: 19.28.h, bottom: 12.29.h),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/Calendar.png",
+                        width: 15.w,
+                        height: 15.35.h,
+                      ),
+                      SizedBox(
+                        width: 18.91.w,
+                      ),
+                      Text("Today"),
+                      SizedBox(
+                        width: 210.6.w,
+                      ),
+                      Text("1"),
+                    ],
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  dense: true,
-                  visualDensity: VisualDensity(horizontal: -1, vertical: -2),
-                  leading: Model.list.last.icon,
-                  title: Text(
-                    Model.list.last.title!,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.sp,
-                      color: Colors.black,
-                    ),
+                const Divider(
+                  height: 0,
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 19.53.w,
+                    right: 25.53.w,
+                    top: 10.85.h,
                   ),
-                  trailing: Text(
-                    Model.list.last.num.toString(),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/Calendar.png",
+                        width: 15.w,
+                        height: 15.35.h,
+                      ),
+                      SizedBox(
+                        width: 18.91.w,
+                      ),
+                      Text("Upcoming"),
+                      SizedBox(
+                        width: 188.w,
+                      ),
+                      Text("1"),
+                    ],
                   ),
                 ),
               ],
@@ -116,21 +132,22 @@ class TodoListTaskAddBody extends StatelessWidget {
                 color: Color(0xFFF2F7FF),
               ),
             ),
-            child: ListTile(
-              leading: Text(
-                '●',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 15.sp,
-                ),
-              ),
-              title: Text(
-                "Podcast",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14.sp,
-                ),
+            child: Container(
+              padding: EdgeInsets.only(left: 31.21.w),
+              child: Row(
+                children: [
+                  const Text(
+                    '●',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  SizedBox(
+                    width: 10.69.w,
+                  ),
+                  const Text(
+                    'Podcast',
+                    style: TextStyle(),
+                  ),
+                ],
               ),
             ),
           ),
@@ -172,84 +189,78 @@ class TodoListTaskAddBody extends StatelessWidget {
             ),
             child: Column(
               children: [
-                ListTile(
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -3),
-                  leading: Text(
-                    '●',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 15.sp,
-                    ),
-                  ),
-                  title: Text(
-                    "Hiring",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                    ),
-                  ),
-                  trailing: Text(
-                    "3",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.sp,
-                    ),
+                Container(
+                  margin: EdgeInsets.only(
+                      left: 19.53.w, top: 18.01.h, bottom: 12.28.h),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/Calendar.png",
+                        width: 15.w,
+                        height: 15.35.h,
+                      ),
+                      SizedBox(
+                        width: 18.91.w,
+                      ),
+                      Text("Hiring"),
+                      SizedBox(
+                        width: 222.1.w,
+                      ),
+                      Text("1"),
+                    ],
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -4),
-                  leading: Text(
-                    '●',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 15.sp,
-                    ),
+                const Divider(
+                  height: 0,
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 19.53.w,
+                    top: 11.09.h,
+                    bottom: 14.11.h,
                   ),
-                  title: Text(
-                    "Sourcing",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                    ),
-                  ),
-                  trailing: Text(
-                    "1",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.sp,
-                    ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/Calendar.png",
+                        width: 15.w,
+                        height: 15.35.h,
+                      ),
+                      SizedBox(
+                        width: 18.91.w,
+                      ),
+                      Text("Sourcing"),
+                      SizedBox(
+                        width: 206.1.w,
+                      ),
+                      Text("1"),
+                    ],
                   ),
                 ),
-                Divider(),
-                ListTile(
-                  dense: true,
-                  visualDensity: VisualDensity(vertical: -3),
-                  leading: Text(
-                    '●',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 15.sp,
-                    ),
+                const Divider(
+                  height: 0,
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 19.53.w,
+                    top: 10.85.h,
                   ),
-                  title: Text(
-                    "PortFoilo Companies",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14.sp,
-                    ),
-                  ),
-                  trailing: Text(
-                    "2",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14.sp,
-                    ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/Calendar.png",
+                        width: 15.w,
+                        height: 15.35.h,
+                      ),
+                      SizedBox(
+                        width: 18.91.w,
+                      ),
+                      Text("portfoilo companies"),
+                      SizedBox(
+                        width: 140.1.w,
+                      ),
+                      Text("1"),
+                    ],
                   ),
                 ),
               ],

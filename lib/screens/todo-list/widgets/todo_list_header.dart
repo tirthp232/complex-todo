@@ -8,8 +8,8 @@ class TodoListHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Container(
+      color: Color(0xFFFAFCFE),
       padding: EdgeInsets.only(left: 37.86.w, right: 33.39.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

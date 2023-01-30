@@ -11,7 +11,6 @@ class TodoListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Scaffold(
       backgroundColor: Color(0xFFFAFCFE),
       drawer: TodoListDrawer(title: title),
